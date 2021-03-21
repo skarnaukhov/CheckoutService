@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="C:/Work/prj/epm-e3s/digital-workplace" value="PREVIEW" />
+        <entry key="C:/Work/prj/epm-e3s/digital-workplace/workplace-suite" value="PREVIEW" />
+        <entry key="C:/Work/prj/epm-e3s/e3s-app-anniversary-merch" value="PREVIEW" />
+        <entry key="C:/Work/prj/epm-e3s/e3s-app-extra/src/e3s-app" value="PREVIEW" />
+        <entry key="C:/Work/prj/epm-e3s/e3s-app-profile" value="PREVIEW" />
+        <entry key="C:/Work/prj/epm-e3s/e3s-app-wall" value="PREVIEW" />
+        <entry key="C:/Work/prj/epm-e3s/e3s-main/src/e3s-app" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../ReactiveDemo/demo" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1929" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
