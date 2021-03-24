@@ -3,12 +3,12 @@ pipeline {
         registry = "skarnaukhov/sk_test_repository"
         registryCredential = 'sk_dockerID'
     }
-    agent {
-        docker {
-            image 'maven:3-alpine'
-            args '-v /root/.m2:/root/.m2'
-        }
+    agent any
+
+    tools {
+        maven 'mvn-3.5.2'
     }
+
     stages {
         stage('Build') {
             steps {
