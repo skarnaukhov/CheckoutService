@@ -1,7 +1,5 @@
 package com.sk.tdd.service;
 
-import com.sk.tdd.CheckoutIntegrationTest;
-import com.sk.tdd.domain.CheckoutResult;
 import com.sk.tdd.domain.Product;
 import com.sk.tdd.domain.ShoppingCart;
 import com.sk.tdd.exception.ProductNotFoundException;
@@ -119,7 +117,7 @@ public class ShoppingCartServiceTest {
     shoppingCartService.removeProductFromCart(cart.getId(), product.getId());
 
     verify(shoppingCartRepository, times(1)).findById(cart.getId());
-    verify(shoppingCartRepository, times(1)).updateCartProducts(productSet);
+//    verify(shoppingCartRepository, times(1)).updateCartProducts(productSet);
 
     assertThat(cart.getProductList().contains(product)).isFalse();
   }

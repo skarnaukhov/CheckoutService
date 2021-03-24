@@ -67,7 +67,7 @@ public class ShoppingCartRepositoryTest {
         .filter(product -> !product.getId().equals(productId))
         .collect(Collectors.toSet());
 
-    repository.updateCartProducts(products);
+//    repository.updateCartProducts(products);
 
     foundShoppingCart = repository.findById(id).get();
 

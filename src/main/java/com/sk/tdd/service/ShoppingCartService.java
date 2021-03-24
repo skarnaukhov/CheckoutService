@@ -48,6 +48,6 @@ public class ShoppingCartService {
     final Set<Product> products = cart.getProductList().stream()
         .filter(product -> !product.getId().equals(productId))
         .collect(Collectors.toSet());
-    shoppingCartRepository.updateCartProducts(products);
+//    shoppingCartRepository.updateCartProducts(products);
   }
 }
