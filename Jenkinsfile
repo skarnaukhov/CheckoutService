@@ -1,4 +1,8 @@
 pipeline {
+    environment {
+        registry = "skarnaukhov/sk_test_repository"
+        registryCredential = 'sk_dockerID'
+    }
     agent {
         docker {
             image 'maven:3-alpine'
