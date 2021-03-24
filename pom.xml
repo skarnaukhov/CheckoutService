@@ -6,7 +6,6 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.4.3</version>
-		<relativePath/> <!-- lookup parent from shoppingCartRepository -->
 	</parent>
 	<groupId>com.sk</groupId>
 	<artifactId>tdd</artifactId>
