@@ -3,6 +3,7 @@ package com.sk.tdd.cache;
 import com.sk.tdd.domain.SampleEntity;
 import com.sk.tdd.repository.SampleRepository;
 import com.sk.tdd.service.SampleService;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ import static org.mockito.Mockito.verify;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
+@Ignore
 public class SampleCacheTest {
 
   @Autowired

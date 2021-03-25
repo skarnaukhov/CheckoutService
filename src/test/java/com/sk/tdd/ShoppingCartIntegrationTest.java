@@ -5,6 +5,7 @@ import com.sk.tdd.domain.ShoppingCart;
 import com.sk.tdd.repository.ProductRepository;
 import com.sk.tdd.repository.ShoppingCartRepository;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@Ignore
 public class ShoppingCartIntegrationTest {
 
   private static final String CART_ID_1 = "CART_ID_1";

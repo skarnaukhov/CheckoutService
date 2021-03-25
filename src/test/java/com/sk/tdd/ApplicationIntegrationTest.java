@@ -3,6 +3,7 @@ package com.sk.tdd;
 import com.sk.tdd.domain.SampleEntity;
 import com.sk.tdd.repository.SampleRepository;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@Ignore
 public class ApplicationIntegrationTest {
 
   private static final String SAMPLE_ID_1 = "SAMPLE_ID_1";

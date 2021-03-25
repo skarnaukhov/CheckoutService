@@ -1,6 +1,7 @@
 package com.sk.tdd.repository;
 
 import com.sk.tdd.domain.SampleEntity;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 @RunWith(SpringRunner.class)
 @DataJpaTest
 @AutoConfigureTestDatabase
+@Ignore
 public class SampleRepositoryTest {
 
   @Autowired
