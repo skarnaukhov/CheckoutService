@@ -3,10 +3,12 @@ pipeline {
         registry = "skarnaukhov/sk_test_repository"
         registryCredential = 'sk_dockerID'
     }
-    agent any
 
-    tools {
-        maven 'mvn-3.5.2'
+    agent {
+        docker {
+            image 'maven:3-alpine'
+            args '--network ci --mount type=volume,source=ci-maven-home,target=/root/.m2'
+        }
     }
 
     stages {
