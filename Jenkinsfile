@@ -25,5 +25,30 @@ pipeline {
                 }
             }
         }
+        stage('Build Docker image') {
+            steps {
+                echo "-=- build Docker image -=-"
+                sh "./mvnw docker:build"
+            }
+        }
+
+        stage('Integration & performance tests') {
+            steps {
+                echo "-=- ToDo -=-"
+            }
+        }
+
+        stage('Code inspection & quality gate') {
+            steps {
+                echo "-=- ToDo -=-"
+            }
+        }
+
+        stage('Push Docker image') {
+            steps {
+                echo "-=- push Docker image -=-"
+                sh "./mvnw docker:push"
+            }
+        }
     }
 }
