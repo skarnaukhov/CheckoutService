@@ -26,18 +26,6 @@ pipeline {
                 }
             }
         }
-        stage('Build Docker image') {
-            steps {
-                echo "-=- build Docker image -=-"
-                sh "./mvnw docker:build"
-            }
-        }
-
-        stage('Integration & performance tests') {
-            steps {
-                echo "-=- ToDo -=-"
-            }
-        }
 
         stage('Code inspection & quality gate') {
             steps {
@@ -59,6 +47,12 @@ pipeline {
                         dockerImage.push()
                     }
                 }
+            }
+        }
+
+        stage('Integration & performance tests') {
+            steps {
+                echo "-=- ToDo -=-"
             }
         }
     }
