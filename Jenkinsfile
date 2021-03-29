@@ -37,8 +37,9 @@ pipeline {
             steps{
                 script {
                     docker.withRegistry( '', registryCredential )    {
-                        dockerImage = docker.build registry + ":$BUILD_NUMBER"
-                        dockerImage.push()
+                        app = docker.build(registry)
+                        app.push("${env.BUILD_NUMBER}")
+                        app.push("latest")
                     }
                 }
             }
@@ -47,6 +48,13 @@ pipeline {
         stage('Integration & performance tests') {
             steps {
                 echo "-=- ToDo -=-"
+            }
+        }
+
+        stage('Deploying into k8s'){
+            steps{
+                bat 'kubectl apply -f deploy/deployment.yml'
+                bat 'kubectl apply -f deploy/service.yml'
             }
         }
 
