@@ -11,7 +11,13 @@ import javax.persistence.*;
 public class SampleEntity {
 
   @Id
+
   private String id;
+  private String name;
+
+  public SampleEntity(String name) {
+    this.name = name;
+  }
 
   public SampleEntity() {
     id = "default";

@@ -36,7 +36,7 @@ public class SampleControllerTest {
 
   @Test
   public void getSampleDataById() throws Exception {
-    given(sampleService.getSampleData("ID")).willReturn(new SampleEntity("ID"));
+    given(sampleService.getSampleData("ID")).willReturn(new SampleEntity("ID", "name"));
 
     mockMvc.perform(MockMvcRequestBuilders.get("/sample/SampleEntity/ID"))
         .andExpect(status().isOk())

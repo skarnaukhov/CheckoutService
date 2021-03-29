@@ -2,6 +2,7 @@ pipeline {
     environment {
         registry = "skarnaukhov/sk_test_repository"
         registryCredential = 'sk_dockerID'
+        dockerImage = ''
     }
     agent any
 
@@ -44,10 +45,20 @@ pipeline {
             }
         }
 
-        stage('Push Docker image') {
-            steps {
-                echo "-=- push Docker image -=-"
-                sh "./mvnw docker:push"
+        stage('Building image') {
+            steps{
+                script {
+                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
+                }
+            }
+        }
+        stage('Push Image') {
+            steps{
+                script {
+                    docker.withRegistry( '', registryCredential )    {
+                        dockerImage.push()
+                    }
+                }
             }
         }
     }

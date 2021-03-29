@@ -21,4 +21,9 @@ public class SampleController implements SampleApi {
   public SampleEntity getSampleEntityById(String id) {
     return sampleService.getSampleData(id);
   }
+
+  @Override
+  public void addSampleEntity(String id, String name) {
+    sampleService.addSampleEntity(id,name);
+  }
 }

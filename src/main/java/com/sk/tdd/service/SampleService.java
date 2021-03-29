@@ -27,4 +27,8 @@ public class SampleService {
     }
     return sampleEntity;
   }
+
+  public void addSampleEntity(String id, String name) {
+    sampleRepository.save(new SampleEntity(id, name));
+  }
 }

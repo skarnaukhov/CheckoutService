@@ -29,7 +29,7 @@ public class ApplicationIntegrationTest {
 
   @Before
   public void setUp() throws Exception {
-    this.sampleRepository.save(new SampleEntity(SAMPLE_ID_1));
+    this.sampleRepository.save(new SampleEntity(SAMPLE_ID_1, "name"));
   }
 
   @Test

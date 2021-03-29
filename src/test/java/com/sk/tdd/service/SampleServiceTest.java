@@ -28,7 +28,7 @@ public class SampleServiceTest {
 
   @Test
   public void getSampleData_returnSampleData() {
-    given(sampleRepository.getById("ID")).willReturn(new SampleEntity("ID"));
+    given(sampleRepository.getById("ID")).willReturn(new SampleEntity("ID", "name"));
     SampleEntity sampleEntity = sampleService.getSampleData("ID");
 
     assertThat(sampleEntity).isNotNull();

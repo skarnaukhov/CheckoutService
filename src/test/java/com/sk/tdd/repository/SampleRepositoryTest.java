@@ -26,7 +26,7 @@ public class SampleRepositoryTest {
 
   @Test
   public void getSample_returnSampleData() throws Exception {
-    SampleEntity savedSampleEntity = testEntityManager.persistFlushFind(new SampleEntity("ID"));
+    SampleEntity savedSampleEntity = testEntityManager.persistFlushFind(new SampleEntity("ID", "name"));
     SampleEntity foundSampleEntity = repository.getById("ID");
 
     assertThat(foundSampleEntity).isNotNull();
