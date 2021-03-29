@@ -4,6 +4,7 @@ metadata:
   labels:
     app: checkoutService
   name: checkoutService
+  namespace: online-shop-sandbox
 spec:
   type: NodePort
   ports:

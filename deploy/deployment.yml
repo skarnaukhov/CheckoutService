@@ -4,6 +4,7 @@ metadata:
   labels:
     app: checkoutService
   name: checkoutService
+  namespace: online-shop-sandbox
 spec:
   replicas: 2
   selector:
