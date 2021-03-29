@@ -33,26 +33,14 @@ pipeline {
             }
         }
 
-        stage('Building image') {
-            steps{
-                script {
-                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
-                }
-            }
-        }
-        stage('Push Image') {
+        stage('Build & Push Image') {
             steps{
                 script {
                     docker.withRegistry( '', registryCredential )    {
+                        dockerImage = docker.build registry + ":$BUILD_NUMBER"
                         dockerImage.push()
                     }
                 }
-            }
-        }
-
-        stage('Remove Unused docker image') {
-            steps{
-                sh "docker rmi $registry:$BUILD_NUMBER"
             }
         }
 
