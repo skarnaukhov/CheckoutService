@@ -1,4 +1,4 @@
-FROM alpine:3.12.5 as packager
+FROM alpine:3.10.3 as packager
 RUN apk --no-cache add openjdk11-jdk openjdk11-jmods
 ENV JAVA_MINIMAL="/opt/java-minimal"
 RUN /usr/lib/jvm/java-11-openjdk/bin/jlink \
@@ -9,7 +9,7 @@ RUN /usr/lib/jvm/java-11-openjdk/bin/jlink \
     --release-info="add:IMPLEMENTOR=radistao:IMPLEMENTOR_VERSION=radistao_JRE" \
     --output "$JAVA_MINIMAL"
 
-FROM alpine:3.12.5
+FROM alpine:3.10.3
 LABEL maintainer="SK"
 ENV JAVA_HOME=/opt/java-minimal
 ENV PATH="$PATH:$JAVA_HOME/bin"
