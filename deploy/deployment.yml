@@ -1,20 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: checkout-service
   labels:
-    app: checkoutService
-  name: checkoutService
+    app: checkout-service
   namespace: online-shop-sandbox
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: checkoutService
+      app: checkout-service
   template:
     metadata:
       labels:
-        app: checkoutService
+        app: checkout-service
     spec:
       containers:
-        - image: skarnaukhov/sk_test_repository::latest
-      name: checkoutService
+        - name: checkout-service
+          image: skarnaukhov/sk_test_repository:latest
+          ports:
+            - containerPort: 80
